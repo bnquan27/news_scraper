@@ -64,7 +64,9 @@ def main():
         model="gemini-2.5-flash",
         contents=prompt,
         config=types.GenerateContentConfig(
-            response_json_schema=result_schema, response_mime_type="application/json"
+            response_json_schema=result_schema,
+            response_mime_type="application/json",
+            temperature=0,
         ),
     )
     json_output = response.text
